@@ -45,7 +45,9 @@ check:  ; check if a number is divisible by 3 or 5
         mov rax, rsi              ; big number
         mov rbx, 3                ; divisor being tested
         div rbx
+        jmp gratuitous
 
+gratuitous: 
         cmp rdx, 0
         jz done
 
