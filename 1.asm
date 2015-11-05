@@ -27,7 +27,8 @@ all:        ; loop from 1 to 1000
 
 add:
         add r15, r14
-        inc r14
+        mov r13, 1
+        add r14, r13
         call all
 
 skip:
