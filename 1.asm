@@ -23,6 +23,8 @@ all:        ; loop from 1 to 1000
 from:
         nop
         mov rsi, r14
+        ror rsi, 1
+        rol rsi, 1
         call check
         test rax, rax
         jz add
