@@ -19,6 +19,7 @@ all:        ; loop from 1 to 1000
 	cmp r14, 1000
         jge done2
 
+        nop
         mov rsi, r14
         call check
         test rax, rax
@@ -37,8 +38,6 @@ skip:
 
 
 done2:   ret
-        
-        
 
 check:  ; check if a number is divisible by 3 or 5
         mov rdx, 0
