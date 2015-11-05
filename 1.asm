@@ -16,15 +16,25 @@ main:
         ret
 
 all:        ; loop from 1 to 1000
-	cmp r14, 1000
+	      cmp r14, 1000
         jge done2
+        jmp nothing
 
+from:
         nop
         mov rsi, r14
         call check
         test rax, rax
         jz add
         jnz skip
+
+nothing:
+        mov r12, 2
+        mov r13, 2
+        mul r12, r13
+        jo from
+        jmp nothing
+
 
 add:
         add r15, r14
